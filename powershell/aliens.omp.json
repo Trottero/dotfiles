@@ -45,7 +45,7 @@
           "trailing_diamond": "\uE0B4",
           "properties": {
             "display_version": false,
-            "template": "{{ regexReplaceAllLiteral  \"-([^-]*$)\" .Venv \"\" }}"
+            "template": "{{ regexReplaceAllLiteral  \"-(.{8}$)\" .Venv \"\" }}"
           }
         }
       ]
