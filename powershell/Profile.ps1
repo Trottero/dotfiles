@@ -1,13 +1,14 @@
 Write-Host (Get-Date)
 $hr = Get-Date -Format HH
 $greeting = "AYE"
-if ($hr -gt 0 -And $hr -lt 12) {
+
+if (($hr -gt 0 -And $hr -lt 12) -Or ($hr -eq 0)) {
     $greeting = "Good morning"
 }
-elseif ($hr -gt 12 -And $hr -lt 18) {
+elseif ($hr -gt 11 -And $hr -lt 18) {
     $greeting = "Good afternoon"
 }
-elseif ($hr -gt 18 -And $hr -lt 24) {
+elseif ($hr -gt 17 -And $hr -lt 24) {
     $greeting = "Good evening"
 }
 
@@ -20,4 +21,4 @@ if ($env:TERM_PROGRAM -eq "vscode") {
 
 Set-PSReadlineOption -BellStyle None
 
-oh-my-posh --init --shell pwsh --config ~/AppData/Local/Programs/oh-my-posh/themes/aliens.omp.json | Invoke-Expression
+oh-my-posh --init --shell pwsh --config ~/.omp/aliens.omp.json | Invoke-Expression
