@@ -19,6 +19,8 @@ if ($env:TERM_PROGRAM -eq "vscode") {
     Set-PSReadLineOption -EditMode Emacs
 }
 
+$Env:VIRTUAL_ENV_DISABLE_PROMPT = $true
+
 Set-PSReadlineOption -BellStyle None
 
 oh-my-posh --init --shell pwsh --config ~/.omp/aliens.omp.json | Invoke-Expression
