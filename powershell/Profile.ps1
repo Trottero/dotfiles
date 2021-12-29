@@ -21,6 +21,12 @@ if ($env:TERM_PROGRAM -eq "vscode") {
 
 $Env:VIRTUAL_ENV_DISABLE_PROMPT = $true
 
-Set-PSReadlineOption -BellStyle None
+function IsLocalTerminal() {
+    $noLogo = '-NoLogo', '-nologo', '-c'
+    ([Environment]::GetCommandLineArgs() | Where-Object -FilterScript { $PSItem -in $noLogo })
+}
 
-oh-my-posh --init --shell pwsh --config ~/.omp/aliens.omp.json | Invoke-Expression
+Set-PSReadlineOption -BellStyle None
+if (IsLocalTerminal) {
+    oh-my-posh --init --shell pwsh --config ~/.omp/aliens.omp.json | Invoke-Expression
+}
