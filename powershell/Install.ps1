@@ -2,7 +2,7 @@
 
 # Copy powershell profile to the right place
 mkdir -Force ~/Documents/WindowsPowerShell
-Copy-Item $PSScriptRoot/Profile.ps1 -Destination ~/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1
+Copy-Item $PSScriptRoot/Profile.ps1 -Destination $Profile
 
 # Add Oh My Posh profile
 mkdir -Force ~/.omp
