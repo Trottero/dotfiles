@@ -12,3 +12,4 @@ winget install -e --id Microsoft.Azure.FunctionsCoreTools
 winget install -e --id pnpm.pnpm
 winget install -e --id CoreyButler.NVMforWindows
 winget install -e --id EclipseAdoptium.Temurin.19.JRE
+winget install -e --id EclipseAdoptium.Temurin.19.JDK
